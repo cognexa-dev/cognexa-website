@@ -1,12 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const dynamic = "force-dynamic";
+
 const TO = "sales@cognexa.in";
 const FROM = "no-reply@cognexa.in";
 
 export async function POST(req: NextRequest) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error("Contact form error: RESEND_API_KEY is not set");
+      return NextResponse.json({ error: "Email service is not configured. Please call us directly." }, { status: 500 });
+    }
+    const resend = new Resend(apiKey);
+
     const body = await req.json();
     const { name, company, email, phone, role, interests, message } = body;
 
