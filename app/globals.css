@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: "Inter", system-ui, sans-serif;
+    --font-dm-sans: "DM Sans", system-ui, sans-serif;
+    --font-geist-mono: "Geist Mono", monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans text-ink bg-white;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-sapphire-500 ring-offset-2;
+  }
+
+  ::selection {
+    @apply bg-sapphire-500/20 text-navy-900;
+  }
+}
+
+@layer components {
+  .container-xl {
+    @apply w-full max-w-7xl mx-auto px-6 lg:px-10;
+  }
+
+  .section-pad {
+    @apply py-20 lg:py-28;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.15em] text-muted;
+  }
+
+  .eyebrow-light {
+    @apply text-xs font-semibold uppercase tracking-[0.15em] text-white/50;
+  }
+
+  .text-gradient-sapphire {
+    @apply bg-gradient-to-r from-sapphire-500 to-aqua-600 bg-clip-text text-transparent;
+  }
+
+  .prose-enterprise {
+    @apply text-lg text-muted leading-relaxed max-w-2xl;
+  }
+
+  .card-base {
+    @apply rounded-2xl border border-slate-100 bg-white shadow-enterprise transition-shadow duration-200;
+  }
+
+  .card-base:hover {
+    @apply shadow-enterprise-lg;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-slate-600 hover:text-ink transition-colors duration-150;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-sapphire-500 text-white font-semibold text-sm
+           hover:bg-sapphire-600 active:scale-[0.98] transition-all duration-150 shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-200 bg-white text-ink font-semibold text-sm
+           hover:border-slate-300 hover:bg-slate-50 active:scale-[0.98] transition-all duration-150;
+  }
+
+  .btn-ghost-light {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/20 text-white font-semibold text-sm
+           hover:border-white/40 hover:bg-white/10 active:scale-[0.98] transition-all duration-150;
+  }
+
+  .tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold tracking-wide;
+  }
+
+  .divider-line {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grid-dots {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .grid-lines {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+}
+
+/* Animated connection lines in hero diagram */
+@keyframes dash {
+  to { stroke-dashoffset: 0; }
+}
+
+.animate-dash {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Mobile menu transitions */
+.menu-enter {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms, transform 200ms;
+}
