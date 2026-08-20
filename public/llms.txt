@@ -1,0 +1,26 @@
+# Cognexa Technologies
+
+> Cognexa Technologies provides enterprise cybersecurity, AI automation, and knowledge intelligence platforms — Surakshitam, Aurobit, and Vidya AI — to mid-to-large businesses across India.
+
+Contact: +91 98989 31509, sales@cognexa.in. Based in India, serving India and global clients.
+
+## Products
+
+- [Surakshitam](https://cognexa.in/products/surakshitam/): Enterprise cybersecurity suite — managed firewall (Kavach), vulnerability scanning (Durg), penetration testing (Shastra), web application firewall, VPN, captive portal, and network monitoring. Also at [surakshitam.com](https://surakshitam.com).
+- [Aurobit](https://cognexa.in/products/aurobit/): AI operations and automation platform for runbook automation, incident management, and AIOps analytics.
+- [Vidya AI](https://cognexa.in/products/vidya-ai/): Private knowledge intelligence platform that makes enterprise policies and SOPs accessible through natural language, deployed on-premise.
+
+## Solutions
+
+- [Cybersecurity](https://cognexa.in/solutions/cybersecurity/)
+- [Data Management](https://cognexa.in/solutions/data-management/)
+- [Knowledge Management](https://cognexa.in/solutions/knowledge/)
+- [AI Automation](https://cognexa.in/solutions/automation/)
+
+## Other pages
+
+- [About](https://cognexa.in/about/)
+- [Industries served](https://cognexa.in/industries/)
+- [Case studies](https://cognexa.in/case-studies/)
+- [Blog](https://cognexa.in/blog/)
+- [Contact](https://cognexa.in/contact/)
