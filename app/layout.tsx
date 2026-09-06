@@ -173,7 +173,10 @@ const globalSchema = {
           areaServed: "IN",
         },
       ],
-      sameAs: ["https://www.linkedin.com/company/cognexatech/"],
+      sameAs: [
+        "https://www.linkedin.com/company/cognexatech/",
+        "https://www.instagram.com/cognexatechllp",
+      ],
     },
     {
       "@type": "WebSite",
